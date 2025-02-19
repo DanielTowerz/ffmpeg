@@ -1,6 +1,10 @@
 const std = @import("std");
 const assert = std.debug.assert;
 
+// DanielTowerz
+pub extern fn av_log_set_callback(callback: ?*const fn (ptr: ?*anyopaque, level: c_int, fmt: [*c]const u8, vl: [*c]u8) callconv(.C) void) void;
+//////////////////////////////////////////////
+
 /// Prefer `FormatContext.alloc`.
 pub extern fn avformat_alloc_context() ?*FormatContext;
 /// Prefer `FormatContext.free`.
